@@ -44,6 +44,7 @@ x_show.pack()
 y_show = tk.Label(text="", fg="white", bg="#323232")
 y_show.pack()
 
+
 def gen_xy ():
     min_val = int(min_entry.get())
     max_val = int(max_entry.get())
