@@ -1,3 +1,6 @@
+#這段是給mac電腦使用的
+# import ssl
+# ssl._create_default_https_context = ssl._create_unverified_context
 
 import urllib.request as req
 def getData(url):
