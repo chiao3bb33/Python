@@ -1,6 +1,6 @@
 #這段是給mac電腦使用的
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
+# import ssl
+# ssl._create_default_https_context = ssl._create_unverified_context
 
 #抓取PTT 八卦版的網頁原始碼(HTML)
 import urllib.request as req
@@ -25,7 +25,7 @@ def getData(url):
         if title.a !=None: #如果標題包含a標籤(沒有被刪除)就會抓出來
             con = title.a.string
             print(con)
-            with open("PTT3.txt", mode="a", encoding="utf-8") as file:  # 把爬下来的内容写入到data3.txt
+            with open("PTT.txt", mode="a", encoding="utf-8") as file:  # 把爬下来的内容写入到data3.txt
                 file.write(con+'\n')
 
     #抓取下一頁連結
@@ -36,7 +36,7 @@ def getData(url):
 
 #抓取一個頁面標題
 #呼叫函式
-pageURL = input"https://www.ptt.cc/bbs/creditcard/index.html"
+pageURL ="https://www.ptt.cc/bbs/creditcard/index.html"
 count=0
 while count<=10:    #幾頁寫幾
     pageURL="https://www.ptt.cc"+getData(pageURL)
