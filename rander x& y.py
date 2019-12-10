@@ -57,13 +57,15 @@ def gen_xy ():
 def copy ():
     xy = x_show.cget("text") + "\n" + y_show.cget("text")
     pyperclip.copy(xy)
-  
+
 # 生成及複製按鈕
 generate_btn = tk.Button(text="Generate", command= gen_xy)
 generate_btn.pack()
 copy_btn = tk.Button(text="Copy", command= copy)
 copy_btn.pack()
 
-
+# Tk視窗參數設定(常駐視窗 放置末端)
 win.mainloop()
+
+
 
